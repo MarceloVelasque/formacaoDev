@@ -6,6 +6,8 @@ import helpers.Helpers;
 
 public class Teste {
 
+	public static Object sc;
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Pessoa p1 = new Pessoa("Pedro", 20);
@@ -16,6 +18,11 @@ public class Teste {
 		p2.exibirInfo();
 
 		sc.close();
+	}
+
+	public static void menu() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
