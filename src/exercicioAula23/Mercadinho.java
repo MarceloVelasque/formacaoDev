@@ -34,29 +34,29 @@ public class Mercadinho {
 		System.out.println("DIGITE 5 PARA COMPRAR SAL");
 		System.out.println("DIGITE UMA DAS OPÇÕES");
 		
-	switch (venda1.getListaVenda()) {
-		case 1:
-			System.out.println("VOCÊ ESCOLHEU COMPRAR FEIJÃO");
-			break;
-		case 2:
-			System.out.println("VOCÊ ESCOLHEU COMPRAR MACARRÃO");
-			break;
-		case 3:
-			System.out.println("VOCÊ ESCOLHEU COMPRAR ARROZ");
-			break;
-		case 4:
-			System.out.println("VOCÊ ESCOLHEU COMPRAR CARNE");
-			break;
-		case 5:
-			System.out.println("VOCÊ ESCOLHEU COMPRAR SAL");
-			break;
+//	switch (venda1.getListaVenda()) {
+//		case 1:
+//			System.out.println("VOCÊ ESCOLHEU COMPRAR FEIJÃO");
+//			break;
+//		case 2:
+//			System.out.println("VOCÊ ESCOLHEU COMPRAR MACARRÃO");
+//			break;
+//		case 3:
+//			System.out.println("VOCÊ ESCOLHEU COMPRAR ARROZ");
+//			break;
+//		case 4:
+//			System.out.println("VOCÊ ESCOLHEU COMPRAR CARNE");
+//			break;
+//		case 5:
+//			System.out.println("VOCÊ ESCOLHEU COMPRAR SAL");
+//			break;
 
-		}
+		
 		Pagamento pagamento = new Pagamento();
 		System.out.println("adicione o tipo de pagaemnto");
 		pagamento.selecionarTipoPagamento(ler.nextInt());
 		
-       
+     
 
 	
 	}
