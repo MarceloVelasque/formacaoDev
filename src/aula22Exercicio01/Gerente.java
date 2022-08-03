@@ -21,7 +21,7 @@ public class Gerente extends Funcionario {
 	@Override
 	
 	public void calcularImposto() {
-		 imposto = (this.getSalario() /100* 3);
+		 float imposto = (this.getSalario() /100* 3);
 	}
 	
 	@Override

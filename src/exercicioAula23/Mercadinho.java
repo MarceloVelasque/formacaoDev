@@ -3,62 +3,57 @@ package exercicioAula23;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import exercicioAula24.Pagamento;
+import exercicioAula24.Produto;
+import exercicioAula24.Venda;
+
 public class Mercadinho {
 
 	public static void main(String[] args) {
-		int escolha = 0;
-		Scanner ler = new Scanner(System.in);
-		System.out.println("BEM VINDO AO NOSSO APLICATIVOS DE COMPRA");
-		System.out.println(" O ESTOQUE DOS PRODUTOS SÃO");
-		ArrayList<Produto> estoque = new ArrayList<Produto>();
-		estoque.add(new Produto("feijão", 12D, 34));
-		estoque.add(new Produto("macarrão", 5D, 30));
-		estoque.add(new Produto("arroz", 14D, 40));
-		estoque.add(new Produto("carne ", 34D, 10));
-		estoque.add(new Produto("sal", 10D, 55));
+		Produto produto1 = new Produto();
+		Produto produto2 = new Produto();
+		Produto produto3 = new Produto();
+		Produto produto4 = new Produto();
 
-		for (int i = 0; i < estoque.size(); i++) {
-			System.out.println("" + estoque.get(i));
-		}
+		Pagamento pag = new Pagamento();
 
-		Venda venda1 = new Venda();
-		System.out.println("");
-		
+		Venda venda = new Venda();
 
-		System.out.println("--------------------------------------------");
-		System.out.println("SIGA O MENU PARA EXCOLHER O PRODUTO QUE DESEJA COMPRAR");
-		System.out.println("DIGITE 1 PARA COMPRAR FEIJÃO");
-		System.out.println("DIGITE 2 PARA COMPRAR MACARRÃO");
-		System.out.println("DIGITE 3 PARA COMPRAR ARROZ");
-		System.out.println("DIGITE 4 PARA COMPRAR CARNE");
-		System.out.println("DIGITE 5 PARA COMPRAR SAL");
-		System.out.println("DIGITE UMA DAS OPÇÕES");
-		
-//	switch (venda1.getListaVenda()) {
-//		case 1:
-//			System.out.println("VOCÊ ESCOLHEU COMPRAR FEIJÃO");
-//			break;
-//		case 2:
-//			System.out.println("VOCÊ ESCOLHEU COMPRAR MACARRÃO");
-//			break;
-//		case 3:
-//			System.out.println("VOCÊ ESCOLHEU COMPRAR ARROZ");
-//			break;
-//		case 4:
-//			System.out.println("VOCÊ ESCOLHEU COMPRAR CARNE");
-//			break;
-//		case 5:
-//			System.out.println("VOCÊ ESCOLHEU COMPRAR SAL");
-//			break;
+		produto1.setNome("carne patinho");
+		produto1.setPreco(35.5);
+		produto1.setQuantidadeEstoque(6);
 
-		
-		Pagamento pagamento = new Pagamento();
-		System.out.println("adicione o tipo de pagaemnto");
-		pagamento.selecionarTipoPagamento(ler.nextInt());
-		
-     
+		produto2.setNome("guarana");
+		produto2.setPreco(4.82);
+		produto2.setQuantidadeEstoque(100);
 
-	
+		produto3.setNome("cerveja");
+		produto3.setPreco(4.77);
+		produto3.setQuantidadeEstoque(200);
+
+		produto4.setNome("arroz");
+		produto4.setPreco(15);
+		produto4.setQuantidadeEstoque(20);
+
+		System.out.println("PRODUTOS EM ESTOQUE");
+		System.out.println("Produto 1: " + produto1.getQuantidadeEstoque());
+		System.out.println("Produto 2: " + produto2.getQuantidadeEstoque());
+		System.out.println("Produto 3: " + produto3.getQuantidadeEstoque());
+		System.out.println("Produto 4: " + produto4.getQuantidadeEstoque());
+
+		System.out.println();
+
+		venda.adicionarItemVenda(produto1);
+		venda.adicionarItemVenda(produto2);
+		venda.adicionarItemVenda(produto3);
+		venda.adicionarItemVenda(produto4);
+		pag.selecionarTipoPagamento(1);
+
+		System.out.println("PRODUTOS VENDIDO ");
+		venda.visualizarVenda();
+
+		System.out.println("FORMAS DE PAGAMENTO");
+		venda.concluirVenda(pag);
 	}
 
 }

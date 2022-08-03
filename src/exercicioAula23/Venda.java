@@ -1,63 +1,65 @@
 package exercicioAula23;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import exercicioAula24.Pagamento;
+import exercicioAula24.Produto;
+
 public class Venda {
-	private double vlrtotal;
-	private  ArrayList<Produto> listaVenda;
-	
-	
+	private double vlrTotal;
+	ArrayList<Produto> listaVenda = new ArrayList<>();
 
 	public Venda() {
 		super();
 	}
 
-	public Venda(double vlrtotal, ArrayList<Produto> listaVenda) {
+	public Venda(double vlrTotal, ArrayList<Produto> listaVenda) {
 		super();
-		this.vlrtotal = vlrtotal;
+		this.vlrTotal = vlrTotal;
 		this.listaVenda = listaVenda;
 	}
 
-	public double getVlrtotal() {
-		return vlrtotal;
+	public void adicionarItemVenda(Produto prod) {
+		if (prod.verificarEstoque(prod) == true) {
+			listaVenda.add(prod);
+			this.vlrTotal = this.getVlrTotal() + prod.getPreco();
+		} else {
+			System.out.println("Produto sem estoque!");
+		}
 	}
 
-	public void setVlrtotal(double vlrtotal) {
-		this.vlrtotal = vlrtotal;
+	public void visualizarVenda() {
+		DecimalFormat df = new DecimalFormat("#,###.00");
+
+		for (int i = 0; i < this.listaVenda.size(); i++) {
+			System.out.println("Produto " + (i + 1) + ": " + this.listaVenda.get(i).getNome() + "\nPreço: R$ "
+					+ df.format(this.listaVenda.get(i).getPreco()) + "\n");
+		}
+	}
+
+	public void concluirVenda(Pagamento pag) {
+		DecimalFormat df = new DecimalFormat("#,###.00");
+
+		System.out.println();
+		System.out.println("Total da venda: R$ " + df.format(this.getVlrTotal()));
+		pag.realizarPagamento1(pag);
+		this.listaVenda.clear();
+	}
+
+	public double getVlrTotal() {
+		return vlrTotal;
+	}
+
+	public void setVlrTotal(double vlrTotal) {
+		this.vlrTotal = vlrTotal;
 	}
 
 	public ArrayList<Produto> getListaVenda() {
 		return listaVenda;
 	}
 
-	public void setListaVEnda(ArrayList<Produto> listaVenda) {
+	public void setListaVenda(ArrayList<Produto> listaVenda) {
 		this.listaVenda = listaVenda;
-	}
+	}}
 
-	public void adicionarItemVenda(Produto produto) {
-		this.vlrtotal += produto.getPreco();
-	}
-
-	public void visualizarVenda() {
-		toString();
-	}
-
-	@Override
-	public String toString() {
-		return "Venda [listaVenda=" + listaVenda + "]";
-	}
-
-	public void concluirVenda(Pagamento pagamento) {
-		System.out.println("o valor total das vendas "+this.getVlrtotal());
-		pagamento.realizarPagamento(pagamento);
-		this.setListaVenda(new ArrayList<Produto>());
-		
-		
-
-	}
-
-	private void setListaVenda(ArrayList<Produto> arrayList) {
-		// TODO Auto-generated method stub
-		
-	}
-}

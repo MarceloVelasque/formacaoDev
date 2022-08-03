@@ -39,9 +39,9 @@ public class CadastroPessoa {
 	System.out.println("digite o salário do funcionário"+""+funcionario.getNome("marcelo"));
 	funcionario.setSalario(ler.nextFloat());
 	System.out.println("o calculo do imposto do salário do funcionario "+""+funcionario.getNome("marcelo")+""+"R$"+funcionario.getSalario());
-	System.out.println("o imposto do salário do funcionário é "+funcionario.getImposto());
+	System.out.println("o imposto do salário do funcionário é "+funcionario.calculaImposto());
 	funcionario.imprimirDados();
-	funcionario.getImposto();
+	funcionario.calculaImposto();
 	}
 	else if (menu==3) {
 	
@@ -51,9 +51,9 @@ public class CadastroPessoa {
 	System.out.println("digite o salário do gerente"+""+ gerente.getNome("zé pequeno"));
 	gerente.setSalario(ler.nextFloat());
 	System.out.println("o calculo do imposto do salário do funcionario "+""+gerente.getNome("marcelo")+""+"R$"+gerente.getSalario());
-	System.out.println("o imposto do salário do funcionário é "+gerente.getImposto());
+	System.out.println("o imposto do salário do funcionário é "+gerente.calculaImposto());
 	gerente.imprimirDados();
-	gerente.getImposto();
+	gerente.calculaImposto();
 	} else {
 		System.out.println("opção invalida");
 	}

@@ -20,4 +20,9 @@ public abstract class Pessoa {
 		
 	}
 
+	public void imprimeDados() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
