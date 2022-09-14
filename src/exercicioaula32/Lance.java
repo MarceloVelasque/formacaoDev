@@ -1,4 +1,4 @@
-package exerciciosaula32;
+package exercicioaula32;
 
 public class Lance {
 	private Usuario usuario;

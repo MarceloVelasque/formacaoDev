@@ -1,4 +1,4 @@
-package exerciciosaula32;
+package exercicioaula32;
 
 import java.util.List;
 import java.util.ArrayList;

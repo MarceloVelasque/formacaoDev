@@ -1,4 +1,4 @@
-package exerciciosaula32;
+package exercicioaula32;
 
 public class ContaEspecial {
 	protected float limite;

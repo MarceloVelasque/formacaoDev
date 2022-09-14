@@ -1,4 +1,4 @@
-package exerciciosaula32;
+package exercicioaula32;
 
 public class Exercicio01Calculadora {
 	public int somar(int num1, int num2) {

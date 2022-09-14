@@ -1,11 +1,12 @@
-package exerciciosaula32;
+package exercicioaula32;
 
-public class Usuario {
-private String nome;
-	
-	public Usuario() {};
-	
-	public Usuario(String nome) {
+public class Cliente {
+	private String nome;
+
+	public Cliente() {
+	};
+
+	public Cliente(String nome) {
 		this.nome = nome;
 	}
 
@@ -19,7 +20,7 @@ private String nome;
 
 	@Override
 	public String toString() {
-		return "Usuario [nome=" + nome + "]";
+		return "Cliente [nome=" + nome + "]";
 	}
-	
+
 }

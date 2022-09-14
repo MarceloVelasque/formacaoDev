@@ -1,4 +1,4 @@
-package exerciciosaula32;
+package exercicioaula32;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.DisplayName;

@@ -1,13 +1,13 @@
-package exerciciosaula32;
+package exercicioaula32;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import exerciciosaula32.Avaliador;
-import exerciciosaula32.Cliente;
-import exerciciosaula32.Leilao;
-import exerciciosaula32.Usuario;
+import exercicioaula32.Avaliador;
+import exercicioaula32.Cliente;
+import exercicioaula32.Leilao;
+import exercicioaula32.Usuario;
 
 public class LeilaoTest {
 
